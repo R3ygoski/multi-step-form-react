@@ -1,0 +1,93 @@
+@use '../abstract/var' as v;
+
+.summary {
+    &__title {
+        font-size: 1.5rem;
+        color: v.$marine-blue;
+    }
+    &__description {
+        margin-top: 0.5rem;
+        letter-spacing: 0.0125rem;
+        line-height: 1.5rem;
+        color: v.$cool-gray;
+    }
+    &__results {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.35rem;
+        padding: 0.8rem 1rem;
+        gap: 0.65rem;
+        background: v.$alabaster;
+        &__plan {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid v.$light-gray;
+            &__name {
+                color: v.$marine-blue;
+                font-weight: 700;
+                line-height: 1.4rem;
+                span {
+                    font-size: 0.9375rem;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    color: v.$cool-gray;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                        color: v.$purplish-blue;
+                    }
+                }
+            }
+            &__price {
+                font-size: 0.9375rem;
+                font-weight: 700;
+                color: v.$marine-blue;
+            }
+        }
+        &__addon {
+            &__name {
+                display: flex;
+                justify-content: space-between;
+                color: v.$cool-gray;
+                span {
+                    color: v.$marine-blue;
+                }
+            }
+        }
+    }
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding: 0 1rem;
+        color: v.$cool-gray;
+        span {
+            color: v.$purplish-blue;
+            font-weight: 700;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .summary {
+        margin-top: 2.325rem;
+        margin-left: 6.75rem;
+        &__title {
+            font-size: 2rem;
+        }
+        &__results {
+            width: 27.125rem;
+            margin-top: 2.75rem;
+            &__plan {
+                padding-bottom: 1.2rem;
+            }
+        }
+        &__total {
+            font-size: 1.125rem;
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

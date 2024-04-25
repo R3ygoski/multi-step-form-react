@@ -1,0 +1,53 @@
+@use './scss/abstract/var' as v;
+@use './scss/component/header';
+@use './scss/component/FooterMobile';
+@use './scss/component/FooterDesktop';
+@use './scss/component/App';
+@use './scss/component/Sidebar';
+
+@use './scss/component/PersonalInfo';
+@use './scss/component/Plan';
+@use './scss/component/AddOns';
+@use './scss/component/Summary';
+@use './scss/component/Thanks';
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  border: none;
+}
+
+html {
+  background: v.$magnolia;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

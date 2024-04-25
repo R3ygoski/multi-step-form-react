@@ -1,0 +1,62 @@
+@use '../abstract/var' as v;
+
+.footer--desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 36px;
+    left: 360px;
+    width: 50%;
+    height: 48px;
+    margin: 0 auto;
+    padding: 0rem;
+    z-index: 2;
+    background: v.$white;
+    .footer__back-btn-container, .footer__next-btn-container {
+        display: flex;
+        width: 30%;
+        height: 100%;
+        padding: 0;     
+        button {
+            padding: 0.25rem 1.75rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            
+        }
+    }
+    .footer__back-btn-container {
+        justify-content: flex-start;
+        button {
+            background: v.$white;
+            color: v.$cool-gray;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                color: v.$marine-blue;
+            }
+        } 
+    }
+    .footer__next-btn-container {
+        justify-content: flex-end;
+        button {
+            background: v.$marine-blue;
+            color: v.$white;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                filter: brightness(160%);
+            }
+        }
+        .footer__confirm-btn {
+            background: v.$purplish-blue;
+            color: v.$white;            
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .footer--desktop {
+        display: none;
+    }
+}
